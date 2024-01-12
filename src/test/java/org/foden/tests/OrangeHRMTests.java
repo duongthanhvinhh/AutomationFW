@@ -2,6 +2,7 @@ package org.foden.tests;
 
 import org.assertj.core.api.Assertions;
 import org.foden.pages.OrangeHRMLoginPage;
+import org.foden.reports.ExtentReport;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 

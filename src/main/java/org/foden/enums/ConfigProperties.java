@@ -2,5 +2,9 @@ package org.foden.enums;
 
 public enum ConfigProperties {
     URL,
+    OVERRIDEREPORTS,
+    PASSEDSTEPSSCREENSHOTS,
+    FAILEDSTEPSSCREENSHOTS,
+    SKIPPEDSTEPSSCREENSHOTS,
     BROWSER
 }

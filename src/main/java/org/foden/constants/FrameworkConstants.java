@@ -1,5 +1,8 @@
 package org.foden.constants;
 
+import org.foden.enums.ConfigProperties;
+import org.foden.utils.PropertyUtils;
+
 public final class FrameworkConstants {
 
     private FrameworkConstants(){}
@@ -9,6 +12,7 @@ public final class FrameworkConstants {
     private static final String CONFIGFILEPATH = RESOURCEPATH + "/config/config.properties";
     private static final String JSONFILEPATH = RESOURCEPATH + "/config/config.json";
     private static final int EXPLICITWAIT = 10;
+    private static final String EXTENTREPORTPATH = System.getProperty("user.dir") + "/extent-test-output";
     public static int getExplicitwait(){
         return EXPLICITWAIT;
     }
@@ -22,6 +26,11 @@ public final class FrameworkConstants {
     }
     public static String getJsonfilepath(){
         return JSONFILEPATH;
+    }
+    public static String getExtentreportpath() throws Exception {
+        if (PropertyUtils.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("yes")){
+            return EXTENTREPORTPATH + "/" + System.currentTimeMillis() + "index.html";
+        } else return EXTENTREPORTPATH + "/index.html";
     }
 
 }

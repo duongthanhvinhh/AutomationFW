@@ -19,6 +19,7 @@
         <jodaTimeVersion>2.12.5</jodaTimeVersion>
         <jacksonVersion>2.16.1</jacksonVersion>
         <jacksonCoreVersion>2.16.1</jacksonCoreVersion>
+        <extentreportsVersion>5.1.1</extentreportsVersion>
     </properties>
 
     <dependencies>
@@ -70,6 +71,12 @@
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-core</artifactId>
             <version>${jacksonCoreVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.aventstack/extentreports -->
+        <dependency>
+            <groupId>com.aventstack</groupId>
+            <artifactId>extentreports</artifactId>
+            <version>${extentreportsVersion}</version>
         </dependency>
 
     </dependencies>
