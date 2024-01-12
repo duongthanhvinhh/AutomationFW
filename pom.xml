@@ -17,6 +17,8 @@
         <assertjVersion>3.25.0</assertjVersion>
         <assertjJodaTimeVersion>2.2.0</assertjJodaTimeVersion>
         <jodaTimeVersion>2.12.5</jodaTimeVersion>
+        <jacksonVersion>2.16.1</jacksonVersion>
+        <jacksonCoreVersion>2.16.1</jacksonCoreVersion>
     </properties>
 
     <dependencies>
@@ -32,7 +34,7 @@
             <groupId>org.testng</groupId>
             <artifactId>testng</artifactId>
             <version>${testngVersion}</version>
-            <scope>test</scope>
+<!--            <scope>test</scope>-->
         </dependency>
 
         <!-- https://mvnrepository.com/artifact/org.assertj/assertj-core -->
@@ -56,6 +58,18 @@
             <groupId>joda-time</groupId>
             <artifactId>joda-time</artifactId>
             <version>${jodaTimeVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-databind -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>${jacksonVersion}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/com.fasterxml.jackson.core/jackson-core -->
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>${jacksonCoreVersion}</version>
         </dependency>
 
     </dependencies>
