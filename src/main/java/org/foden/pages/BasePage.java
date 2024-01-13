@@ -15,7 +15,7 @@ public class BasePage {
 
     protected void click(By by, WaitStrategy waitStrategy, String eleName){
         ExplicitWaitFactory.performExplicitWait(waitStrategy,by).click();
-        ExtentLogger.pass(eleName + " is clicked");
+            ExtentLogger.pass(eleName + " is clicked");
     }
 
     protected void sendKeys(By by,String value,WaitStrategy waitStrategy, String eleName){

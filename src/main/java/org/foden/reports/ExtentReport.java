@@ -16,10 +16,20 @@ public final class ExtentReport {
 
     private ExtentReport(){}
     private static ExtentReports extent;
+    private static String extentreportPath;
+
+    static {
+        try {
+            extentreportPath = FrameworkConstants.getExtentreportpath();
+        } catch (Exception e) {
+            throw new RuntimeException(e);
+        }
+    }
+
     public static void initReports() throws Exception {
         if (Objects.isNull(extent)){
             extent = new ExtentReports();
-            ExtentSparkReporter spark = new ExtentSparkReporter(FrameworkConstants.getExtentreportpath());
+            ExtentSparkReporter spark = new ExtentSparkReporter(extentreportPath);
             extent.attachReporter(spark);
             spark.config().setTheme(Theme.STANDARD);
             spark.config().setDocumentTitle("Foden Report");
@@ -33,7 +43,7 @@ public final class ExtentReport {
         }
         ExtentManager.unload();
         try {
-            Desktop.getDesktop().browse(new File(FrameworkConstants.getExtentreportpath()).toURI());
+            Desktop.getDesktop().browse(new File(extentreportPath).toURI());
         }
         catch (Exception e) {
             throw new RuntimeException(e);

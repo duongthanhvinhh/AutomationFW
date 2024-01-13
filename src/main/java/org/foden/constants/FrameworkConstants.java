@@ -28,7 +28,7 @@ public final class FrameworkConstants {
         return JSONFILEPATH;
     }
     public static String getExtentreportpath() throws Exception {
-        if (PropertyUtils.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("yes")){
+        if (PropertyUtils.get(ConfigProperties.OVERRIDEREPORTS).equalsIgnoreCase("no")){
             return EXTENTREPORTPATH + "/" + System.currentTimeMillis() + "index.html";
         } else return EXTENTREPORTPATH + "/index.html";
     }
